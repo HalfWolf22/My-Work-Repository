@@ -112,13 +112,13 @@ threshold.
 Parameters:
     df - pandas.DataFrame object, the df that the transformation is performed on
     target - pandas.Series object, values to correlate features with
-    threshold - number value, drop values that correlate to the target below this threshold
+    threshold - number value, drop values that correlate to the target below this threshold(default=0)
 
 Note:
-    Somewhat primitive, might drop features that could be important (random forest feature weights could, for
-    an example find some features useful).
+    Somewhat primitive, might drop features that could be important (random forest feature weights could,
+    for an example find some features useful).
 """
-def get_abv_corr(df, target, threshold):
+def get_abv_corr(df, target, threshold=0):
     import pandas as pd
     
     ftr_list = []
@@ -129,17 +129,18 @@ def get_abv_corr(df, target, threshold):
     return ftr_list
 
 """
-print_abv_corr - Similar to the function above, but only prints the features and their values above certain threshold
+print_abv_corr - Similar to the function above, but only prints the features and their values above certain
+threshold.
 
 Parameters:
     df - pandas.DataFrame object, the df that the transformation is performed on
     target - pandas.Series object, values to correlate features with
-    threshold - number value, drop values that correlate to the target below this threshold
+    threshold - number value, drop values that correlate to the target below this threshold (default 0)
 
 Note:
     /
 """
-def print_abv_corr(df, target, threshold):
+def print_abv_corr(df, target, threshold=0):
     import pandas as pd
     
     for feature, value in df.corrwith(target).sort_values(ascending=False).iteritems():
@@ -364,7 +365,8 @@ def rmsle(target, predicted, return_value=False):
         print((sum / len(predicted)) ** 0.5)
 
 """
-plot_data_vs_pred - performs PCA on the whole data to be able to plot real vs. predicted values in a scatter plot.
+plot_data_vs_pred - performs PCA on the whole data to be able to plot real vs. predicted values in a scatter
+plot.
 
 Parameters:
     df - pandas.DataFrame object, machine learning model features (X)
@@ -392,14 +394,15 @@ def plot_data_vs_pred(df, target, predicted):
     plt.show()
 
 """
-check_forest_corr - Checks feature importance based on random forest weights and returns the list with features
-which score is lower than the given threshold.
+check_forest_corr - Checks feature importance based on random forest weights and returns the list with 
+features which score is lower than the given threshold.
 
 Parameters:
     df - pandas.DataFrame object, the df that the transformation is performed on
     target - pd.Series, label column
     drop_list - list object, list which will be returned
-    threshold - decimal value (range 0-1), threshold above which all correlated features will be added (0.001 def.)
+    threshold - decimal value (range 0-1), threshold above which all correlated features will be added
+    (0.001 def.)
 
 Note:
     Not always optional.
@@ -416,12 +419,13 @@ def check_forest_corr(df, target, drop_list, threshold=0.001):
             drop_list.append(feature)
 
 """
-drop_opposite - Drops very highly correlated column (for example if we have "Does Have" and "Does not Have" feature,
-it will remove one of them because it is irrelevant).
+drop_opposite - Drops very highly correlated column (for example if we have "Does Have" and "Does not Have"
+feature, it will remove one of them because it is irrelevant).
 
 Parameters:
     df - pandas.DataFrame object, the df that the transformation is performed on
-    threshold - decimal value (range 0-1), threshold above which all correlated features will be dropped (0.85 def.)
+    threshold - decimal value (range 0-1), threshold above which all correlated features will be dropped
+    (0.85 def.)
 
 Note:
     /
@@ -443,7 +447,8 @@ merge_similar - Merges highly correlated columns (above given threshold) into on
 
 Parameters:
     df - pandas.DataFrame object, the df that the transformation is performed on
-    threshold - decimal value (range 0-1), threshold above which all correlated features will be merged (0.45 def.)
+    threshold - decimal value (range 0-1), threshold above which all correlated features will be merged
+    (0.45 def.)
 
 Note:
     Might loose column name information while performing this function for multiple times.
@@ -511,7 +516,20 @@ def impute_lin_reg(df, related_features, impute_col):
 
     new_impute_col = data['Target']
     return new_impute_col
-    
+
+"""
+impute_lin_reg - Imputes missing values in pandas column based on given feature(s) that is(are) relevant to
+the column with missing values using linear regression. Returns imputed pandas.Series .
+
+Parameters:
+    df - pandas.DataFrame object, the df that the transformation is performed on
+    related_features - list of strings, column names in the data set
+    impute_col - string, the column who's values are being imputed
+
+Note:
+    It is derived from Kaggle Notebook on Housing Competition and modified.
+    Credits go to: https://www.kaggle.com/mgmarques
+"""    
 def look(df, pred=None):
     import numpy as np
     import pandas as pd
