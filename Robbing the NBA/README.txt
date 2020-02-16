@@ -15,7 +15,7 @@ so you have 2 options:
 	link I gave you. This also saves you of the hustle of having to move the datasets to the folders where they
 	are supposed to be since you are downloading everything already prepared.
 
-	Link: 
+	Link: http://www.mediafire.com/file/58nidymdaxh5v1e/Robbing_the_NBA.zip/file
 
 Feel free to use the datasets from this repository just don't forget to give the credit!
 
