@@ -1,0 +1,33 @@
+MOTIVATION
+
+    Here are some things I want to point out before you go through my little project (or during). All credits go to
+gov.data.rs where I downloaded all open-source data. That is where my troubles began. The data was not
+user friendly for English-speaking users so I had to translate it, it contained a lot of seemingly random ID columns 
+from what I assume are some types of databases that use those IDs for referring and some other minor things that I
+also had to deal with.
+
+    Not that all the datasets from the website were able to be used. I don't want to rant too much but here are some
+noteworthy dataset bunches that weren't able to make the cut:
+        - Construction Works, Business Services, Inside Trade, Agriculture, Forestry and Fishing, Catering and 
+        Tourism, Law, Culture, The Environment,...
+Not that those areas are not mentioned at all, on the contrary, they were widely used in my analysis through 
+agregate datasets, but couldn't get treatment of their own. They were either redundant, unretrievable or not
+usable.
+
+    Also, I want to excuse myself if the EDA gets monotone while reading it, keeping it non-monotone was quite a 
+challenge and in the end, I think I wasn't completely successful in achieving that.
+
+COUNTRY CODES USED IN A PART OF THE NOTEBOOK
+
+    "Alpha-2 code" was used, here is a website with the list of all the codes: https://www.iban.com/country-codes
+
+NOTES
+
+    - I am still in the process of learning, so my EDA might not be at it's full potential
+    - "Activity" and "Sector" terms are used almost interchangeably
+    - Normally, a country's population would be one of the first things I'd mention in a notebook like this one,
+    but I thought that the results we got in the population (decreasing) are the product of the bad economic state 
+    that we had to analyze all earlier in order to explain the decrease in population.
+
+
+
