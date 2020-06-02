@@ -1,8 +1,3 @@
-This is a (maybe not so) little project that I did in my spare time between learning theory. Here, I would like to
-present my Business Intelligence skills I could deliver in a real-world example project (as of 16. February 2020).
-I made all of this from scrap, from scraping data, cleaning/wrangling, visualizing, modifying, exploring, plotting
-and making predictive models.
-
 The README file should contain all of the additional information about this repository you are going to need to
 better understand or navigate it. All of the datasets are not included in the repository because of their size,
 so you have 2 options:
@@ -39,7 +34,7 @@ needed.
      |
      |--- game_scraper - Game data scraping script, chunk functionality added for the reason above
      |
-     |--- Merge and Clean Up - A bit of data manipulation so it is more useful
+     |--- Merge and Clean Up - A bit of data wrangling so it is more useful
                |
                |--- game_data.csv - The exported file that is located in 3.Getting Useful Data   
 
@@ -68,7 +63,7 @@ needed.
             |
             |--- player_data.csv - The exported file that is located in 3.Getting Useful Data
 
---DATA MANIPULATION--
+--DATA WRANGLING--
 
 -Used for various cleaning and data mining.
 
