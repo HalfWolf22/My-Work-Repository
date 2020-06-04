@@ -74,7 +74,7 @@ directories, it might not be used in all of them.
      |
      |--- preds.csv - Final prediction output
      |
-     |--- demo_video.mp4 - Demo video with a game, demonstrating the predictive power of the model
+     |--- demo_video.m4v - Demo video with a game, demonstrating the predictive power of the model
      |
      |--- Demo Predictions.ipynb - Final model evaluation notebook
 
