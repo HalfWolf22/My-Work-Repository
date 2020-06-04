@@ -1,7 +1,3 @@
-NOTES FOR REDDIT: This is not real app, it is edited etc.
-
-Diff data was scraped because normal model was sufficient
-
 INTUITION
 
 The idea behind this project was to make a model that can predict the probabilities that each team has of
