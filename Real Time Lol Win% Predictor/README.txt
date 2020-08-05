@@ -1,3 +1,5 @@
+4th June 2020
+
 INTUITION
 
 The idea behind this project was to make a model that can predict the probabilities that each team has of
